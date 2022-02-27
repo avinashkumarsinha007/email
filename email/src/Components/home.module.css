@@ -1,0 +1,27 @@
+.heading{
+    display: flex;
+}
+
+.heading>div{
+    margin-left: 1vw;
+    font-size: 1.3rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.container{
+padding: 3.5vw;
+
+}
+
+.selected{
+    background-color: #e1e4ea;
+    padding: 1px 8px;
+    border-radius: 20px;
+    border: 1px solid #cfd2dc;
+    cursor: pointer;
+}
+
+.cardContainer{
+    display: flex;
+}
