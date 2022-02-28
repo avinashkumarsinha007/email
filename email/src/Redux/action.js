@@ -1,4 +1,4 @@
-import { GET_APP_DATA_FAILURE, GET_EMAIL_LIST_REQUEST, GET_EMAIL_LIST_SUCCESS,GET_APP_DATA_REQUEST,GET_APP_DATA_SUCCESS, SET_BODY } from "./actionType"
+import { GET_APP_DATA_FAILURE, GET_EMAIL_LIST_REQUEST, GET_EMAIL_LIST_SUCCESS,GET_APP_DATA_REQUEST,GET_APP_DATA_SUCCESS, SET_BODY, SET_FAV, SET_FILTER } from "./actionType"
 import axios from "axios";
 
 const getEmailDataRequest = () => {
@@ -58,6 +58,20 @@ export const getEmailBodyData=(id=null)=>(dispatch)=>{
 export const setBody=(payload)=>{
     return{
         type:SET_BODY,
+        payload
+    }
+}
+
+export const setFav=(payload)=>{
+    return{
+        type:SET_FAV,
+        payload
+    }
+}
+
+export const setFilter=(payload)=>{
+    return{
+        type:SET_FILTER,
         payload
     }
 }

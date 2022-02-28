@@ -6,13 +6,16 @@ import {
   GET_EMAIL_LIST_REQUEST,
   GET_EMAIL_LIST_SUCCESS,
   SET_BODY,
+  SET_FAV,
+  SET_FILTER,
 } from "./actionType";
 
 const inState = {
-  isLoading: false,
+  isLoading: true,
   isError: false,
   list: [],
-  body: '',
+    body: "",
+    filterList:[]
 };
 
 export const reducer = (state = inState, { type, payload }) => {
@@ -24,7 +27,7 @@ export const reducer = (state = inState, { type, payload }) => {
       };
     case GET_EMAIL_LIST_SUCCESS: {
       let updatedPayload = payload.map((el) => {
-          return { ...el, read: false, favorite: false, body: false };
+        return { ...el, read: false, favorite: false, body: false };
       });
       return {
         ...state,
@@ -54,11 +57,21 @@ export const reducer = (state = inState, { type, payload }) => {
       return {
         ...state,
         isError: true,
+      };
+    case SET_BODY:
+      return {
+        ...state,
+        list: payload,
+      };
+    case SET_FAV:
+      return {
+        ...state,
+        list: payload,
           };
-          case SET_BODY:
+          case SET_FILTER:
             return {
-                ...state,
-             list:payload   
+              ...state,
+              filterList:payload,
             };
     default:
       return state;

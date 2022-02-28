@@ -7,6 +7,8 @@ export const GET_APP_DATA_SUCCESS = "GET_APP_DATA_SUCCESS";
 export const GET_APP_DATA_FAILURE = "GET_APP_DATA_FAILURE";
 
 export const SET_BODY = "SET_BODY";
+export const SET_FAV = "SET_FAV";
 
-export const SET_SORTED = "SET_SORTED";
+export const SET_READ = "SET_READ";
+export const SET_UNREAD = "SET_UNREAD";
 export const SET_FILTER = "SET_FILTER";

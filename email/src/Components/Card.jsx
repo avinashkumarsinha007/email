@@ -7,8 +7,7 @@ export const Card = ({ item ,handleBody }) => {
     let initial = item.from?.name[0];
     initial= initial.toUpperCase();
     return (
-        <>
-           
+        <>          
             <div onClick={()=>handleBody(item.id)} className={item.read?styles.container1:styles.container}>
                 <div>
                     <div className={styles.circle}><p className={styles.initial}>{ initial}</p></div>
@@ -17,7 +16,7 @@ export const Card = ({ item ,handleBody }) => {
                     <p >From:<span className={styles.text}>{item?.from.name}{'<' }{item?.from.email}{'>'}</span></p>
                     <p >Subject:<span className={styles.text}>{item.subject }</span></p>
                     <p>{ item.short_description}</p>
-                    <p>{ date} <span> { }</span></p>
+                    <p>{ date} <span className={styles.fav}> {item.favorite?"Favorite":null }</span></p>
                 </div>              
             </div>
               
